@@ -172,7 +172,7 @@ export const dailyQueryStrCn = `
     query questionOfToday {
         todayRecord {
             question {
-                questionId
+                frontendQuestionId: questionFrontendId
             }
         }
     }
@@ -195,7 +195,7 @@ export const getDailyProblemID = (res : AxiosResponse<any, any>) => {
     const point = leetCodeConfig.get<string>("endpoint", Endpoint.LeetCode);
     switch (point) {
         case Endpoint.LeetCodeCN:
-            return res.data.data.todayRecord[0].question.questionId;
+            return res.data.data.todayRecord[0].question.frontendQuestionId;
         case Endpoint.LeetCode:
         default:
             return res.data.data.activeDailyCodingChallengeQuestion.question.frontendQuestionId;
