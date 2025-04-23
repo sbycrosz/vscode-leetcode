@@ -486,6 +486,18 @@
                                 },
                                 "minProperties": 1
                             },
+                            "dart": {
+                                "type": "object",
+                                "properties": {
+                                    "folder": {
+                                        "type": "string"
+                                    },
+                                    "filename": {
+                                        "type": "string"
+                                    }
+                                },
+                                "minProperties": 1
+                            },
                             "golang": {
                                 "type": "object",
                                 "properties": {
